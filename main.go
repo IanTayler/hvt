@@ -1,13 +1,22 @@
-// hvt, a CLI for logging time in Harvest.
-// Copyright 2019 Ian Tayler <iangtayler@gmail.com>
+// Copyright © 2019 Ian Tayler <iangtayler@gmail.com>
 //
-// This file is part of hvt and is distributed as free software.
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
 // You should have received a copy of the GNU General Public License
-// along with hvt.  If not, see <https://www.gnu.org/licenses/>.
+// along with this program. If not, see <http://www.gnu.org/licenses/>.
+
 package main
 
-import "fmt"
+import "github.com/IanTayler/hvt/cmd"
 
 func main() {
-	fmt.Println("vim-go")
+	cmd.Execute()
 }

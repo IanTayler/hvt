@@ -12,3 +12,25 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+package hvtclient
+
+import (
+	"fmt"
+	"os"
+)
+
+func DefaultHvtClient() *HvtClient {
+	accessToken := os.Getenv("HVT_ACCESS_TOKEN")
+	accountID := os.Getenv("HVT_ACCOUNT_ID")
+	user := os.Getenv("USER")
+	if user == "" {
+		user = "UNK"
+	}
+	host := os.Getenv("HOST")
+	if host == "" {
+		host = "UNK"
+	}
+	username := fmt.Sprintf("%s@%s", user, host)
+	return NewHvtClient(accessToken, accountID, username)
+}
